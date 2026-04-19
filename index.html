@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Allinchasoft | Software y Datos para Pymes Peruanas</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="container nav-wrap">
+            <a href="#" class="brand" aria-label="Inicio de Allinchasoft">ALLINCHASOFT</a>
+
+            <button class="menu-btn" id="menuBtn" aria-label="Abrir menú" aria-expanded="false" aria-controls="mainNav">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <nav id="mainNav" class="main-nav" aria-label="Navegación principal">
+                <a href="#servicios">Servicios</a>
+                <a href="#diferencia">Diferencial</a>
+                <a href="#contacto">Contacto</a>
+                <a href="https://wa.me/51999999999" target="_blank" rel="noopener" class="btn btn-primary nav-cta">
+                    <i class="fab fa-whatsapp"></i>
+                    <span>Hablemos</span>
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-shape hero-shape-1"></div>
+            <div class="hero-shape hero-shape-2"></div>
+
+            <div class="container hero-grid">
+                <div class="hero-copy">
+                    <p class="eyebrow">Software + datos para pymes peruanas</p>
+                    <h1>
+                        TRANSFORMA TUS DATOS EN
+                        <span>CRECIMIENTO REAL</span>
+                        EN <span class="hero-pill">48 HORAS</span>
+                    </h1>
+                    <p class="hero-text">
+                        Desarrollamos software agil y analitica avanzada para que tu pyme venda mas,
+                        opere mejor y escale sin complicaciones.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a href="https://wa.me/51999999999" target="_blank" rel="noopener" class="btn btn-primary">
+                            <i class="fab fa-whatsapp"></i>
+                            <span>Agendar diagnostico</span>
+                        </a>
+                        <a href="#servicios" class="btn btn-ghost">Ver servicios</a>
+                    </div>
+
+                    <div class="proof-card">
+                        <img src="https://flagcdn.com/w40/pe.png" alt="Bandera de Peru">
+                        <div>
+                            <strong>Casos locales en Lima</strong>
+                            <p>Clientes reportan hasta +15% en ventas mensuales.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-form-card">
+                    <h2>Calcula tu potencial en minutos</h2>
+                    <p>Ingresa tu URL o tu RUC y te mostramos una estimacion inmediata.</p>
+
+                    <form id="growthForm" class="growth-form" novalidate>
+                        <label for="leadInput">URL o RUC (11 digitos)</label>
+                        <input id="leadInput" name="lead" type="text" placeholder="https://tupyme.com o 20123456789">
+                        <button type="submit" class="btn btn-primary btn-block">
+                            <i class="fas fa-rocket"></i>
+                            <span>Ver resultados</span>
+                        </button>
+                        <p id="formFeedback" class="form-feedback" aria-live="polite"></p>
+                    </form>
+
+                    <article id="growthResult" class="result-card" hidden>
+                        <p>Potencial estimado de crecimiento operativo</p>
+                        <strong id="resultValue">0%</strong>
+                        <small>Basado en optimizacion de procesos, datos y automatizacion.</small>
+                    </article>
+
+                    <div class="quick-links">
+                        <a href="#" class="quick-link">
+                            <i class="fas fa-code"></i>
+                            <div>
+                                <strong>Software a medida</strong>
+                                <span>Vende mas y controla tu operacion.</span>
+                            </div>
+                        </a>
+                        <a href="#" class="quick-link">
+                            <i class="fas fa-robot"></i>
+                            <div>
+                                <strong>Automatizacion con IA</strong>
+                                <span>Reduce tiempos y errores repetitivos.</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="servicios" class="features">
+            <div class="container">
+                <div class="section-head">
+                    <p class="eyebrow">Enfoque 100% peruano</p>
+                    <h2>SOLO PARA PYMES PERUANAS</h2>
+                </div>
+
+                <div class="feature-grid">
+                    <article class="feature-card">
+                        <i class="fas fa-headset"></i>
+                        <h3>Soporte local 24/7</h3>
+                        <p>Entendemos tu mercado y te acompanamos de punta a punta, sin tickets eternos.</p>
+                    </article>
+                    <article class="feature-card">
+                        <i class="fas fa-hand-holding-usd"></i>
+                        <h3>Inversion por etapas</h3>
+                        <p>Implementamos por fases para que veas resultados rapido y pagues con control.</p>
+                    </article>
+                    <article class="feature-card">
+                        <i class="fas fa-chart-line"></i>
+                        <h3>Metricas de negocio</h3>
+                        <p>No entregamos solo codigo: entregamos indicadores claros de impacto.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="diferencia" class="cta-band">
+            <div class="container cta-band-wrap">
+                <h2>Tu competencia usa intuicion. Tu pyme puede usar datos.</h2>
+                <a href="https://wa.me/51999999999" target="_blank" rel="noopener" class="btn btn-light">Quiero una demo</a>
+            </div>
+        </section>
+
+        <section id="contacto" class="contact">
+            <div class="container contact-wrap">
+                <h2>Listo para modernizar tu operacion?</h2>
+                <p>Escribenos y en menos de 24 horas te proponemos una ruta de mejora clara.</p>
+                <a href="mailto:contacto@allinchasoft.com" class="btn btn-primary">contacto@allinchasoft.com</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-wrap">
+            <div>
+                <p class="footer-brand">ALLINCHASOFT</p>
+                <p class="footer-copy">Software y analitica para pymes peruanas que quieren crecer con datos.</p>
+            </div>
+
+            <nav class="footer-links" aria-label="Enlaces del pie de pagina">
+                <a href="#servicios">Servicios</a>
+                <a href="#diferencia">Diferencial</a>
+                <a href="#contacto">Contacto</a>
+            </nav>
+        </div>
+        <div class="container footer-bottom">
+            <small>© 2026 Allinchasoft. Todos los derechos reservados.</small>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/51999999999" target="_blank" rel="noopener" class="floating-wa" title="Chat en vivo por WhatsApp" aria-label="Chat en vivo por WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>
