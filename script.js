@@ -1,6 +1,9 @@
 const menuBtn = document.getElementById("menuBtn");
 const mainNav = document.getElementById("mainNav");
 const siteHeader = document.querySelector(".site-header");
+const hero = document.querySelector(".hero");
+const heroVisual = document.querySelector(".hero-visual");
+const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
 if (menuBtn && mainNav) {
     menuBtn.addEventListener("click", () => {
@@ -47,7 +50,7 @@ revealGroups.forEach((selectors) => {
     const elements = document.querySelectorAll(selectors.join(","));
     elements.forEach((element, index) => {
         element.setAttribute("data-reveal", "");
-        element.style.setProperty("--reveal-delay", `${Math.min(index * 70, 360)}ms`);
+        element.style.setProperty("--reveal-delay", `${Math.min(index * 95, 520)}ms`);
     });
 });
 
@@ -66,12 +69,31 @@ if ("IntersectionObserver" in window) {
             });
         },
         {
-            threshold: 0.16,
-            rootMargin: "0px 0px -8% 0px"
+            threshold: 0.1,
+            rootMargin: "0px 0px -4% 0px"
         }
     );
 
     revealItems.forEach((item) => revealObserver.observe(item));
 } else {
     revealItems.forEach((item) => item.classList.add("is-visible"));
+}
+
+if (hero && heroVisual && !prefersReducedMotion) {
+    const handleParallax = (event) => {
+        const rect = hero.getBoundingClientRect();
+        const xRatio = (event.clientX - rect.left) / rect.width - 0.5;
+        const yRatio = (event.clientY - rect.top) / rect.height - 0.5;
+        const moveX = xRatio * 18;
+        const moveY = yRatio * 12;
+
+        heroVisual.style.transform = `translate3d(${moveX}px, ${moveY}px, 0)`;
+    };
+
+    const resetParallax = () => {
+        heroVisual.style.transform = "translate3d(0, 0, 0)";
+    };
+
+    hero.addEventListener("mousemove", handleParallax);
+    hero.addEventListener("mouseleave", resetParallax);
 }

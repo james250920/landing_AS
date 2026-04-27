@@ -114,6 +114,8 @@ a {
     overflow: hidden;
     padding: 5rem 0 4.5rem;
     background: linear-gradient(135deg, #1e3a8a 0%, #020617 100%);
+    background-size: 180% 180%;
+    animation: hero-gradient-shift 14s ease-in-out infinite;
 }
 
 .hero-shape {
@@ -121,7 +123,7 @@ a {
     pointer-events: none;
     border-radius: 999px;
     filter: blur(2px);
-    animation: drift 8.5s ease-in-out infinite;
+    animation: drift 6.5s ease-in-out infinite;
 }
 
 .hero-shape-1 {
@@ -138,7 +140,7 @@ a {
     right: -90px;
     top: 80px;
     background: radial-gradient(circle, rgba(249, 115, 22, 0.35) 0%, rgba(255, 122, 26, 0) 72%);
-    animation-delay: -3.4s;
+    animation-delay: -2.2s;
 }
 
 .hero-grid {
@@ -150,6 +152,7 @@ a {
 
 .hero-visual {
     min-width: 0;
+    transition: transform 0.26s ease-out;
 }
 
 .hero-collage {
@@ -175,9 +178,9 @@ a {
 }
 
 .hero-collage-image:hover {
-    transform: translateY(-5px) scale(1.02);
+    transform: translateY(-9px) scale(1.035);
     border-color: rgba(255, 255, 255, 0.3);
-    box-shadow: 0 16px 30px rgba(2, 6, 23, 0.36);
+    box-shadow: 0 24px 42px rgba(2, 6, 23, 0.44);
 }
 
 .hero-collage-empty {
@@ -295,7 +298,7 @@ a {
 }
 
 .btn:hover {
-    transform: translateY(-2px);
+    transform: translateY(-4px) scale(1.015);
 }
 
 .btn-primary {
@@ -339,12 +342,13 @@ a {
     padding: 0.9rem 1rem;
     max-width: 260px;
     box-shadow: 0 18px 32px rgba(2, 6, 23, 0.18);
-    transition: transform 0.28s ease, box-shadow 0.28s ease;
+    transition: transform 0.28s ease, box-shadow 0.28s ease, background-color 0.28s ease;
 }
 
 .hero-collage:hover .showcase-badge {
-    transform: translateY(-3px);
-    box-shadow: 0 22px 34px rgba(2, 6, 23, 0.22);
+    transform: translateY(-5px) scale(1.01);
+    background: rgba(255, 255, 255, 0.98);
+    box-shadow: 0 24px 36px rgba(2, 6, 23, 0.24);
 }
 
 .showcase-badge strong {
@@ -416,9 +420,9 @@ a {
 }
 
 .service-chip:hover {
-    transform: translateY(-4px);
+    transform: translateY(-7px) rotate(-0.45deg);
     border-color: #c9d6ea;
-    box-shadow: 0 14px 26px rgba(15, 23, 42, 0.09);
+    box-shadow: 0 20px 34px rgba(15, 23, 42, 0.14);
 }
 
 .service-chip i {
@@ -519,9 +523,9 @@ a {
 }
 
 .why-card:hover {
-    transform: translateY(-6px);
+    transform: translateY(-10px);
     border-color: #d6e0ef;
-    box-shadow: 0 18px 30px rgba(15, 23, 42, 0.12);
+    box-shadow: 0 24px 38px rgba(15, 23, 42, 0.16);
 }
 
 .why-card i {
@@ -576,9 +580,9 @@ a {
 }
 
 .feature-card:hover {
-    transform: translateY(-6px);
+    transform: translateY(-10px);
     border-color: #d6e0ef;
-    box-shadow: 0 15px 28px rgba(15, 23, 42, 0.1);
+    box-shadow: 0 22px 36px rgba(15, 23, 42, 0.15);
 }
 
 .feature-card-seo {
@@ -616,7 +620,7 @@ a {
     inset: -140% -10% auto;
     height: 220%;
     background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 55%);
-    animation: shine 8s linear infinite;
+    animation: shine 5.5s linear infinite;
     pointer-events: none;
 }
 
@@ -746,18 +750,18 @@ a {
     font-size: 1.45rem;
     z-index: 45;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
-    animation: wa-pulse 2.6s ease-in-out infinite;
+    animation: wa-pulse 1.8s ease-in-out infinite;
 }
 
 .floating-wa:hover {
-    transform: scale(1.08);
-    box-shadow: 0 18px 34px rgba(255, 122, 26, 0.45);
+    transform: scale(1.13) translateY(-2px);
+    box-shadow: 0 22px 38px rgba(255, 122, 26, 0.52);
 }
 
 [data-reveal] {
     opacity: 0;
-    transform: translateY(24px) scale(0.99);
-    transition: opacity 0.6s ease, transform 0.6s ease;
+    transform: translateY(34px) scale(0.98);
+    transition: opacity 0.78s cubic-bezier(0.2, 0.9, 0.2, 1), transform 0.78s cubic-bezier(0.2, 0.9, 0.2, 1);
     transition-delay: var(--reveal-delay, 0ms);
 }
 
@@ -772,7 +776,17 @@ a {
         transform: translateY(0px) translateX(0px);
     }
     50% {
-        transform: translateY(12px) translateX(6px);
+        transform: translateY(18px) translateX(12px);
+    }
+}
+
+@keyframes hero-gradient-shift {
+    0%,
+    100% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
     }
 }
 
@@ -782,7 +796,7 @@ a {
         box-shadow: 0 14px 30px rgba(255, 122, 26, 0.35);
     }
     50% {
-        box-shadow: 0 18px 34px rgba(255, 122, 26, 0.5);
+        box-shadow: 0 24px 40px rgba(255, 122, 26, 0.58);
     }
 }
 
