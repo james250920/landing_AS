@@ -44,7 +44,7 @@ a {
 .site-header {
     position: sticky;
     top: 0;
-    z-index: 40;
+    z-index: 30;
     backdrop-filter: blur(8px);
     background: rgba(255, 255, 255, 0.95);
     border-bottom: 1px solid #e5e7eb;
@@ -65,17 +65,26 @@ a {
 }
 
 .brand {
-    font-family: "Sora", sans-serif;
-    font-size: 1.45rem;
-    font-weight: 800;
-    letter-spacing: 0.02em;
-    color: var(--primary);
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 78px;
+    overflow: visible;
     transition: color 0.2s ease, transform 0.2s ease;
 }
 
 .brand:hover {
-    color: var(--primary-2);
     transform: translateY(-1px);
+}
+
+.brand-logo {
+    display: block;
+    width: auto;
+    height: 42px;
+    max-width: 220px;
+    object-fit: contain;
+    transform: scale(1.9);
+    transform-origin: left center;
 }
 
 .main-nav {
@@ -682,10 +691,19 @@ a {
 
 .footer-brand {
     margin: 0;
-    font-family: "Sora", sans-serif;
-    color: #ffffff;
-    font-size: 1.05rem;
-    letter-spacing: 0.04em;
+    line-height: 0;
+    overflow: visible;
+}
+
+.footer-brand-logo {
+    display: block;
+    width: auto;
+    height: 44px;
+    max-width: 220px;
+    object-fit: contain;
+    transform: scale(2);
+    transform-origin: left center;
+    filter: brightness(0) invert(1);
 }
 
 .footer-copy {
@@ -1055,7 +1073,12 @@ a {
     }
 
     .brand {
-        font-size: 1.2rem;
+        max-width: 56vw;
+    }
+
+    .brand-logo {
+        height: 34px;
+        transform: scale(1.7);
     }
 
     .hero {
@@ -1134,6 +1157,11 @@ a {
 
     .footer-branding {
         max-width: none;
+    }
+
+    .footer-brand-logo {
+        height: 36px;
+        transform: scale(1.8);
     }
 
     .footer-links a {
