@@ -304,6 +304,7 @@ a {
     font-weight: 800;
     cursor: pointer;
     transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+    
 }
 
 .btn:hover {
@@ -512,7 +513,7 @@ a {
 
 .why-section {
     padding: 4rem 0 1rem;
-    background: #ffffff;
+    background: linear-gradient(110deg, #a8c1f7 0%, #8dabe4 55%, #3a7aea 100%);
 }
 
 .why-grid {
